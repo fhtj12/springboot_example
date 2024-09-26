@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.web.dao.ICommonDao">
+
+    <select id="getSysPropValue" parameterType="QueryMap" resultType="java.lang.String">
+        SELECT PROP_VAL
+        FROM system_prop
+        WHERE PROP_CD = #{value}
+    </select>
+
+    <select id="getSysProp" parameterType="QueryMap" resultType="ProtoMap">
+        SELECT PROP_CD,
+               PROP_VAL,
+               PROP_DESC,
+               PROP_CATE_CD
+        FROM system_prop
+        WHERE PROP_CD = #{PROP_CD}
+    </select>
+
+</mapper>

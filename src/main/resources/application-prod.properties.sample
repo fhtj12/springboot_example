@@ -1,0 +1,15 @@
+spring.config.activate.on-profile=prod
+
+# thymeleaf 설정
+spring.thymeleaf.cache=true
+
+# Oracle DataSource
+spring.datasource.url=jdbc:oracle:thin:127.0.0.1:1521/TORA11
+spring.datasource.username=example
+spring.datasource.password=example!123
+
+# redis 설정
+REDIS_AUTH_HOST=localhost
+REDIS_AUTH_PORT=6380
+REDIS_AUTH_DBNUM=4
+REDIS_AUTH_MAX_CONNECTION=100

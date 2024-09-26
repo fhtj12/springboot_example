@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.web.dao.ITestDao">
+
+    <select id="getTestCode" parameterType="QueryMap" resultType="java.lang.String">
+
+        SELECT PROP_VAL FROM system_prop WHERE PROP_CD = 'OP_MASTERAI_HOSTNAME'
+
+    </select>
+
+</mapper>
